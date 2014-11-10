@@ -60,6 +60,23 @@ javac.target: 					1.8
     osgi.debug=,\
     do.not.remove=Works around a bug in bndtools when the osgi.console property does not have a value
 
+-buildpath.efx:  \
+	org.eclipse.e4.core.commands,\
+	org.eclipse.e4.core.contexts,\
+	org.eclipse.e4.core.di,\
+	org.eclipse.e4.core.di.extensions,\
+	org.eclipse.e4.core.services,\
+	org.eclipse.e4.ui.di,\
+	org.eclipse.e4.ui.model.workbench,\
+	org.eclipse.e4.ui.services,\
+	org.eclipse.e4.ui.workbench,\
+	javax.inject;version=1.0,\
+	javax.annotation;version=1.2
+
+-buildpath:
+	
+	
+
 -runpath:
 -plugin:
 -runsystempackages:
