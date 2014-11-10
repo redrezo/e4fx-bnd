@@ -64,14 +64,12 @@
 	org.eclipse.fx.ui.workbench.services;version='[1.1.0,1.1.1)',\
 	org.eclipse.osgi.services;version='[3.4.0,3.4.1)'
 	
-# Nothing starts the product, maybe event the identifier is wrong?
+# Nothing starts the product, maybe even the identifier is wrong?
 #-runproperties: eclipse.product=dummy.product
 
 # This only works with an IApplication launching bundle (like org.eclipse.fx.bndlauncher)
 -runproperties: applicationXMI=dummy/Application.e4xmi
 	
-#-runproperties:
-#-runvm:
 -runrequires:  \
 	osgi.identity;filter:='(osgi.identity=dummy)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.ds)',\
@@ -89,5 +87,6 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.fx.bndlauchner)'
 -runrepos:  \
 	Workspace,\
-	e(fx)clipse runtime,\
-	Bndtools Hub
+	InfoRepositoryWrapper[[]],\
+	Bndtools Hub,\
+	e(fx)clipse runtime
