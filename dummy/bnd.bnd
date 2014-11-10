@@ -1,0 +1,31 @@
+Bundle-SymbolicName: dummy; singleton:=true
+
+Private-Package:  \
+	dummy.decoration,\
+	dummy.handlers,\
+	dummy.model,\
+	dummy.parts
+Import-Package:  \
+	javafx.*,\
+	javax.annotation;version=1.0,\
+	javax.inject;version=1.0,\
+	*
+-buildpath:  \
+	javax.inject;version=1.0,\
+	javax.annotation;version=1.2,\
+	org.eclipse.e4.core.services,\
+	org.eclipse.e4.ui.di,\
+	org.eclipse.fx.ui.theme,\
+	org.eclipse.e4.core.di,\
+	org.eclipse.e4.core.di.extensions,\
+	org.eclipse.e4.core.contexts,\
+	org.eclipse.e4.ui.model.workbench,\
+	org.eclipse.e4.ui.workbench,\
+	org.eclipse.e4.core.commands,\
+	org.eclipse.e4.ui.services
+	
+Include-Resource: \
+	plugin.xml = _plugin.xml,\
+	Application.e4xmi = Application.e4xmi,\
+	css = css,\
+	icons = icons 

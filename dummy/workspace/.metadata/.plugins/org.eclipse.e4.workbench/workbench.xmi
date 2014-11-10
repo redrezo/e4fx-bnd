@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_cinSoWjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.application" contributorURI="platform:/plugin/dummy" selectedElement="_cinSomjPEeS_ab8PoEgajA" bindingContexts="_cin5uGjPEeS_ab8PoEgajA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_cinSomjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.mainWindow" contributorURI="platform:/plugin/dummy" selectedElement="_cinSo2jPEeS_ab8PoEgajA" label="Media Application" x="2163" y="146" width="1024" height="768">
+    <persistedState key="fx.stage.decoration" value="platform:/plugin/dummy/dummy/decoration/TopArea.fxml"/>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_cinSo2jPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" selectedElement="_cinSpWjPEeS_ab8PoEgajA" horizontal="true">
+      <children xsi:type="basic:Part" xmi:id="_cinSpGjPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" containerData="3.003913894324853" contributionURI="bundleclass://dummy/dummy.parts.MediaListPart"/>
+      <children xsi:type="basic:PartStack" xmi:id="_cinSpWjPEeS_ab8PoEgajA" elementId="content.stack" contributorURI="platform:/plugin/dummy" containerData="6.996086105675147" selectedElement="_1jjnkGjPEeS6bZkivc1s-A">
+        <children xsi:type="basic:Part" xmi:id="_qajS0WjPEeSsid6Jbu-hrw" contributionURI="bundleclass://dummy/dummy.parts.MediaPart" label="Desert" iconURI="platform:/plugin/dummy/icons/22/games-config-background.png">
+          <persistedState key="MediaObject" value="PICTURE##_##Desert##_##platform:/plugin/dummy/icons/resources/pics/pic1.jpg"/>
+          <persistedState key="translateX" value="-656.0"/>
+          <persistedState key="translateY" value="-833.0"/>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_x0fU0WjPEeS6bZkivc1s-A" contributionURI="bundleclass://dummy/dummy.parts.MediaPart" label="Grog" iconURI="platform:/plugin/dummy/icons/22/kaffeine.png">
+          <persistedState key="MediaObject" value="MOVIE##_##Grog##_##platform:/plugin/dummy/icons/resources/movs/mov1.flv"/>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_1jjnkGjPEeS6bZkivc1s-A" contributionURI="bundleclass://dummy/dummy.parts.MediaPart" label="OTN" iconURI="platform:/plugin/dummy/icons/22/kaffeine.png">
+          <persistedState key="MediaObject" value="MOVIE##_##OTN##_##http://download.oracle.com/otndocs/products/javafx/oow2010-2.flv"/>
+        </children>
+      </children>
+    </children>
+    <trimBars xmi:id="_cinSpmjPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy">
+      <children xsi:type="menu:ToolBar" xmi:id="_cin5sGjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.maintoolbar" contributorURI="platform:/plugin/dummy">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_cin5sWjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.toolitem.open" contributorURI="platform:/plugin/dummy" iconURI="platform:/plugin/dummy/icons/view-preview.png" command="_cin5u2jPEeS_ab8PoEgajA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_cin5smjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.toolitem.save" contributorURI="platform:/plugin/dummy" iconURI="platform:/plugin/dummy/icons/system-restart.png" command="_cin5vGjPEeS_ab8PoEgajA"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_cin5s2jPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://dummy/dummy.handlers.OpenHandler" command="_cin5u2jPEeS_ab8PoEgajA"/>
+  <handlers xmi:id="_cin5tGjPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://dummy/dummy.handlers.RefreshHandler" command="_cin5vGjPEeS_ab8PoEgajA"/>
+  <bindingTables xmi:id="_cin5tWjPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" bindingContext="_cin5uGjPEeS_ab8PoEgajA">
+    <bindings xmi:id="_cin5tmjPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" keySequence="M1+O" command="_cin5u2jPEeS_ab8PoEgajA"/>
+    <bindings xmi:id="_cin5t2jPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" keySequence="M1+R" command="_cin5vGjPEeS_ab8PoEgajA"/>
+  </bindingTables>
+  <rootContext xmi:id="_cin5uGjPEeS_ab8PoEgajA" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/dummy" name="In Dialog and Windows">
+    <children xmi:id="_cin5uWjPEeS_ab8PoEgajA" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/dummy" name="In Windows"/>
+    <children xmi:id="_cin5umjPEeS_ab8PoEgajA" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/dummy" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_cin5u2jPEeS_ab8PoEgajA" elementId="media.open" contributorURI="platform:/plugin/dummy" commandName="openMedia"/>
+  <commands xmi:id="_cin5vGjPEeS_ab8PoEgajA" elementId="media.refresh" contributorURI="platform:/plugin/dummy" commandName="refreshMedia"/>
+  <addons xmi:id="_cin5vWjPEeS_ab8PoEgajA" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_cin5vmjPEeS_ab8PoEgajA" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_cin5v2jPEeS_ab8PoEgajA" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
+  <addons xmi:id="_cin5wGjPEeS_ab8PoEgajA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_cin5wWjPEeS_ab8PoEgajA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_cin5wmjPEeS_ab8PoEgajA" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
+  <addons xmi:id="_cin5w2jPEeS_ab8PoEgajA" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributorURI="platform:/plugin/dummy" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+</application:Application>

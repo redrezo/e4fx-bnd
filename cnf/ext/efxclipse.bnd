@@ -1,0 +1,65 @@
+
+bnd-release	=	https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBuild/artifact/dist/bundles
+-pluginpath:\
+        ${build}/cache/biz.aQute.repository.jar;url=${bnd-release}/biz.aQute.repository/biz.aQute.repository-latest.jar
+
+# no idea what the wrapper does, but added it anyways ...
+-plugin.wrapper: aQute.bnd.deployer.repository.wrapper.Plugin; \
+            location            =	"${build}/cache/wrapper"; \
+            reindex				=	true, \
+
+# our efxclipse runtime repo
+-plugin.efxrepo: aQute.bnd.deployer.repository.FixedIndexedRepo; name=e(fx)clipse runtime; \
+					locations=http://download.eclipse.org/efxclipse/runtime-nightly/site/repository.xml
+
+# need bundlehub because our org.eclipse.osgi bundle does not resolve anything
+-plugin.bundlehub: aQute.bnd.deployer.repository.FixedIndexedRepo; name=Bndtools Hub; locations=https://raw.githubusercontent.com/bndtools/bundle-hub/master/index.xml.gz
+							
+javac.source: 					1.8
+javac.target: 					1.8
+-runee:							JavaSE-1.8
+
+-runpath.efx org.eclipse.fx.osgi 
+
+-runsystempackages.efx: \
+    javax.crypto,\
+    javax.crypto.interfaces,\
+    javax.crypto.spec,\
+    javax.imageio,\
+    javax.imageio.stream,\
+    javax.imageio.event,\
+    javax.imageio.metadata,\
+    javax.imageio.plugins,\
+    javax.imageio.plugins.bmp,\
+    javax.imageio.plugins.jpeg,\
+    javax.imageio.spi,\
+    javax.security,\
+    javax.security.auth,\
+    javax.security.auth.callback,\
+    javax.security.auth.kerberos,\
+    javax.security.auth.login,\
+    javax.security.auth.spi,\
+    javax.security.auth.x500,\
+    javax.security.cert,\
+    javax.security.sasl
+    
+-runsystemcapabilities: ${native_capability} 
+-runtrace: true 
+
+-resolve.effective: active 
+
+-runvm.efx: 
+-runproperties.efx:  \
+	osgi.framework.extensions=org.eclipse.fx.osgi,\
+    osgi.clean=true,\
+    osgi.console=,\
+    eclipse.consoleLog=true,\
+    eclipse.application.launchDefault=true,\
+    osgi.compatibility.eagerStart.LazyActivation=true,\
+    osgi.compatibility.errorOnFailedStart=false,\
+    osgi.debug=,\
+    do.not.remove=Works around a bug in bndtools when the osgi.console property does not have a value
+
+-runpath:
+-plugin:
+-runsystempackages:
