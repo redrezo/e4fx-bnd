@@ -4,6 +4,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 
+import org.eclipse.core.runtime.IProduct;
+import org.eclipse.core.runtime.Platform;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
@@ -17,11 +19,14 @@ public class Main implements Runnable {
 	String[] args;
      
 	public void run(){ 
-		System.err.println("Starting application org.eclipse.fx.ui.workbench.fx.application!");
+		System.err.println("Starting application from product");
 		System.err.println();
 		final BundleContext ctx = FrameworkUtil.getBundle(Main.class).getBundleContext();
 		try {
-			final Collection<ServiceReference<ApplicationDescriptor>> refs = ctx.getServiceReferences(ApplicationDescriptor.class, "(service.pid=org.eclipse.fx.ui.workbench.fx.application)");
+			IProduct p = Platform.getProduct();
+			String application = p.getApplication();
+			System.err.println("application = " + application);
+			final Collection<ServiceReference<ApplicationDescriptor>> refs = ctx.getServiceReferences(ApplicationDescriptor.class, "(service.pid="+application+")");
 			if (!refs.isEmpty()) {
 				final ServiceReference<ApplicationDescriptor> first = refs.iterator().next();
 				final ApplicationDescriptor appDesc = ctx.getService(first);

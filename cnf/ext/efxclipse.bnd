@@ -1,8 +1,11 @@
-
+# bnd plugin setup
+###################
 bnd-release	=	https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBuild/artifact/dist/bundles
 -pluginpath:\
         ${build}/cache/biz.aQute.repository.jar;url=${bnd-release}/biz.aQute.repository/biz.aQute.repository-latest.jar
 
+# repositories
+###############
 # no idea what the wrapper does, but added it anyways ...
 -plugin.wrapper: aQute.bnd.deployer.repository.wrapper.Plugin; \
             location            =	"${build}/cache/wrapper"; \
@@ -48,19 +51,8 @@ javac.target: 					1.8
 
 -resolve.effective: active 
 
--runvm.efx: 
--runproperties.efx:  \
-	osgi.framework.extensions=org.eclipse.fx.osgi,\
-    osgi.clean=true,\
-    osgi.console=,\
-    eclipse.consoleLog=true,\
-    eclipse.application.launchDefault=true,\
-    osgi.compatibility.eagerStart.LazyActivation=true,\
-    osgi.compatibility.errorOnFailedStart=false,\
-    osgi.debug=,\
-    do.not.remove=Works around a bug in bndtools when the osgi.console property does not have a value
-
 -buildpath.efx:  \
+	org.eclipse.core.runtime,\
 	org.eclipse.e4.core.commands,\
 	org.eclipse.e4.core.contexts,\
 	org.eclipse.e4.core.di,\
@@ -74,9 +66,93 @@ javac.target: 					1.8
 	javax.annotation;version=1.2
 
 -buildpath:
-	
-	
 
 -runpath:
 -plugin:
 -runsystempackages:
+
+
+# some macros for the bndrun files
+###################################
+
+efxclipse.version: @1.2.0
+
+bundles.equinox: \
+	org.eclipse.equinox.app;version=@1.3.200,\
+	org.eclipse.equinox.common;version=@3.6.200,\
+	org.eclipse.equinox.console;version=@1.1.0,\
+	org.eclipse.equinox.ds;version=@1.4.200,\
+	org.eclipse.equinox.event;version=@1.3.100,\
+	org.eclipse.equinox.preferences;version=@3.5.200,\
+	org.eclipse.equinox.registry;version=@3.5.400,\
+	org.eclipse.equinox.util;version=@1.0.500
+
+bundles.equinox.console: \
+	org.eclipse.equinox.console;version=@1.1.0,\
+	org.apache.felix.gogo.runtime;version=@0.10.0,\
+	org.apache.felix.gogo.shell;version=@0.10.0,\
+	org.apache.felix.gogo.command;version=@0.10.0
+
+bundles.deps:\
+	com.ibm.icu;version='[52.1.0,52.1.1)',\
+	javax.annotation;version='[1.2.0,1.2.1)',\
+	javax.inject;version='[1.0.0,1.0.1)',\
+	javax.xml;version='[1.3.4,1.3.5)',\
+	org.apache.commons.lang;version='[2.6.0,2.6.1)',\
+	org.eclipse.osgi.services;version='[3.4.0,3.4.1)'
+
+bundles.eclipse.emf: \
+	org.eclipse.emf.common;version='[2.10.1,2.10.2)',\
+	org.eclipse.emf.ecore;version='[2.10.1,2.10.2)',\
+	org.eclipse.emf.ecore.change;version='[2.10.0,2.10.1)',\
+	org.eclipse.emf.ecore.xmi;version='[2.10.1,2.10.2)'
+
+bundles.eclipse.core:\
+	org.eclipse.core.commands;version='[3.6.100,3.6.101)',\
+	org.eclipse.core.contenttype;version='[3.4.200,3.4.201)',\
+	org.eclipse.core.databinding.observable;version='[1.4.1,1.4.2)',\
+	org.eclipse.core.databinding.property;version='[1.4.200,1.4.201)',\
+	org.eclipse.core.expressions;version='[3.4.600,3.4.601)',\
+	org.eclipse.core.jobs;version='[3.6.0,3.6.1)',\
+	org.eclipse.core.runtime;version='[3.10.0,3.10.1)'
+
+bundles.e4.core:\
+	org.eclipse.e4.core.commands;version=@0.10.2,\
+	org.eclipse.e4.core.contexts;version=@1.3.100,\
+	org.eclipse.e4.core.di;version=@1.4.0,\
+	org.eclipse.e4.core.di.extensions;version=@0.12.0,\
+	org.eclipse.e4.core.services;version=@1.2.1,\
+	org.eclipse.e4.ui.di;version=@1.0.0,\
+	org.eclipse.e4.ui.model.workbench;version=@1.1.0,\
+	org.eclipse.e4.ui.services;version=@1.1.0,\
+	org.eclipse.e4.ui.workbench;version=@1.2.1,\
+	org.eclipse.core.commands;version=@3.6.0,\
+	org.eclipse.core.contenttype;version=@3.4.0,\
+	org.eclipse.core.databinding.observable;version=@1.4.1,\
+	org.eclipse.core.databinding.property;version=@1.4.200,\
+
+bundles.e4.efxclipse: \
+	org.eclipse.fx.javafx;version=@2.2.0,\
+	org.eclipse.fx.bndlauchner;version=latest,\
+	org.eclipse.fx.core;version=${efxclipse.version},\
+	org.eclipse.fx.core.databinding;version=${efxclipse.version},\
+	org.eclipse.fx.core.di;version=${efxclipse.version},\
+	org.eclipse.fx.core.di.context;version=${efxclipse.version},\
+	org.eclipse.fx.core.fxml;version=${efxclipse.version},\
+	org.eclipse.fx.osgi.util;version=${efxclipse.version},\
+	org.eclipse.fx.ui.animation;version=${efxclipse.version},\
+	org.eclipse.fx.ui.controls;version=${efxclipse.version},\
+	org.eclipse.fx.ui.di;version=${efxclipse.version},\
+	org.eclipse.fx.ui.dialogs;version=${efxclipse.version},\
+	org.eclipse.fx.ui.keybindings;version=${efxclipse.version},\
+	org.eclipse.fx.ui.keybindings.e4;version=${efxclipse.version},\
+	org.eclipse.fx.ui.keybindings.generic;version=${efxclipse.version},\
+	org.eclipse.fx.ui.panes;version=${efxclipse.version},\
+	org.eclipse.fx.ui.services;version=${efxclipse.version},\
+	org.eclipse.fx.ui.theme;version=${efxclipse.version},\
+	org.eclipse.fx.ui.workbench.base;version=${efxclipse.version},\
+	org.eclipse.fx.ui.workbench.fx;version=${efxclipse.version},\
+	org.eclipse.fx.ui.workbench.renderers.base;version=${efxclipse.version},\
+	org.eclipse.fx.ui.workbench.renderers.fx;version=${efxclipse.version},\
+	org.eclipse.fx.ui.workbench.services;version=${efxclipse.version}
+

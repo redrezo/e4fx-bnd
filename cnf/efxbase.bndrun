@@ -1,0 +1,17 @@
+-runfw: org.eclipse.osgi;version=3.10
+-runee: JavaSE-1.8
+
+runproperties.efx:  \
+	osgi.framework.extensions=org.eclipse.fx.osgi,\
+    eclipse.application.launchDefault=true,\
+    osgi.compatibility.eagerStart.LazyActivation=true,\
+    osgi.compatibility.errorOnFailedStart=false
+
+-runbundles.efx: \
+	${bundles.e4.efxclipse},\
+	${bundles.equinox},\
+	${bundles.deps},\
+	${bundles.eclipse.emf},\
+	${bundles.eclipse.core},\
+	${bundles.e4.core}
+

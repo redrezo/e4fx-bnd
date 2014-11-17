@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_cinSoWjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.application" contributorURI="platform:/plugin/dummy" selectedElement="_cinSomjPEeS_ab8PoEgajA" bindingContexts="_cin5uGjPEeS_ab8PoEgajA">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_cinSomjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.mainWindow" contributorURI="platform:/plugin/dummy" selectedElement="_cinSo2jPEeS_ab8PoEgajA" label="Media Application" x="2163" y="146" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_cinSomjPEeS_ab8PoEgajA" elementId="org.efxclipse.e4.mainWindow" contributorURI="platform:/plugin/dummy" selectedElement="_cinSo2jPEeS_ab8PoEgajA" label="Media Application" x="2022" y="141" width="1024" height="768">
     <persistedState key="fx.stage.decoration" value="platform:/plugin/dummy/dummy/decoration/TopArea.fxml"/>
     <children xsi:type="basic:PartSashContainer" xmi:id="_cinSo2jPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" selectedElement="_cinSpWjPEeS_ab8PoEgajA" horizontal="true">
       <children xsi:type="basic:Part" xmi:id="_cinSpGjPEeS_ab8PoEgajA" contributorURI="platform:/plugin/dummy" containerData="3.003913894324853" contributionURI="bundleclass://dummy/dummy.parts.MediaListPart"/>
-      <children xsi:type="basic:PartStack" xmi:id="_cinSpWjPEeS_ab8PoEgajA" elementId="content.stack" contributorURI="platform:/plugin/dummy" containerData="6.996086105675147" selectedElement="_1jjnkGjPEeS6bZkivc1s-A">
+      <children xsi:type="basic:PartStack" xmi:id="_cinSpWjPEeS_ab8PoEgajA" elementId="content.stack" contributorURI="platform:/plugin/dummy" containerData="6.996086105675147" selectedElement="_vUCWkW47EeS7c_yMbnlz-Q">
         <children xsi:type="basic:Part" xmi:id="_qajS0WjPEeSsid6Jbu-hrw" contributionURI="bundleclass://dummy/dummy.parts.MediaPart" label="Desert" iconURI="platform:/plugin/dummy/icons/22/games-config-background.png">
           <persistedState key="MediaObject" value="PICTURE##_##Desert##_##platform:/plugin/dummy/icons/resources/pics/pic1.jpg"/>
-          <persistedState key="translateX" value="-656.0"/>
-          <persistedState key="translateY" value="-833.0"/>
+          <persistedState key="translateX" value="-1880.9999999999993"/>
+          <persistedState key="translateY" value="-1329.0"/>
+          <persistedState key="scale" value="0.5499999999999999"/>
         </children>
         <children xsi:type="basic:Part" xmi:id="_x0fU0WjPEeS6bZkivc1s-A" contributionURI="bundleclass://dummy/dummy.parts.MediaPart" label="Grog" iconURI="platform:/plugin/dummy/icons/22/kaffeine.png">
           <persistedState key="MediaObject" value="MOVIE##_##Grog##_##platform:/plugin/dummy/icons/resources/movs/mov1.flv"/>
         </children>
         <children xsi:type="basic:Part" xmi:id="_1jjnkGjPEeS6bZkivc1s-A" contributionURI="bundleclass://dummy/dummy.parts.MediaPart" label="OTN" iconURI="platform:/plugin/dummy/icons/22/kaffeine.png">
           <persistedState key="MediaObject" value="MOVIE##_##OTN##_##http://download.oracle.com/otndocs/products/javafx/oow2010-2.flv"/>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_vUCWkW47EeS7c_yMbnlz-Q" contributionURI="bundleclass://dummy/dummy.parts.MediaPart" label="Lighthouse" iconURI="platform:/plugin/dummy/icons/22/games-config-background.png">
+          <persistedState key="MediaObject" value="PICTURE##_##Lighthouse##_##platform:/plugin/dummy/icons/resources/pics/pic2.jpg"/>
+          <persistedState key="scale" value="0.15000000000000002"/>
+          <persistedState key="translateX" value="-1800.0"/>
+          <persistedState key="translateY" value="-1298.0"/>
         </children>
       </children>
     </children>

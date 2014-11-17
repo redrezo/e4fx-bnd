@@ -1130,3 +1130,546 @@ Caused by: org.eclipse.core.runtime.InvalidRegistryObjectException: Invalid regi
 	at java.lang.reflect.Method.invoke(Method.java:483)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
 	... 68 more
+!SESSION 2014-11-17 12:02:53.059 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:02:53.060
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:02:53.063
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:02:53.087
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '57'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/1246271716.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/1827090596.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/1775025334.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/1342448576.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/159164196.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/1085178897.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:03:38.306 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:03:38.307
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:03:38.307
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:03:38.331
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '57'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/1828209857.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/18763311.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/213949202.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/1681581115.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/738558590.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/187862855.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:03:53.680 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:03:53.680
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:03:53.681
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:03:53.703
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '57'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/91564054.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/1161167779.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/1709594568.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/1467393566.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/1278448558.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/1167271979.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:04:46.125 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:04:46.125
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:04:46.126
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:04:46.150
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '57'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/1828209857.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/18763311.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/213949202.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/1681581115.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/738558590.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/187862855.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:06:04.830 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:06:04.830
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:06:04.831
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:06:04.856
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '57'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/488505469.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/902682753.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/724029060.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/1290519020.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/1973570601.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/350722093.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:08:33.662 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:08:33.663
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:08:33.664
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:08:33.689
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '20'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/881191433.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/792762527.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/1294235898.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/1320355455.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/776836189.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/156043657.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:10:46.927 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:10:46.927
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:10:46.928
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:10:46.960
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '20'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/488505469.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/902682753.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/724029060.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/1290519020.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/1973570601.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/350722093.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:14:17.153 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:14:17.153
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.OpenHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:14:17.154
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://dummy/dummy.handlers.RefreshHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:14:17.177
+!MESSAGE Unable to create class 'org.eclipse.fx.ui.workbench.fx.PartRenderingEngine' from bundle '20'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:50)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:335)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.instantiateRenderer(E4Workbench.java:162)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:145)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.lambda$0(E4Application.java:157)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1$$Lambda$61/1793006069.run(Unknown Source)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.fx.ui.workbench.fx.E4Application$1.run(E4Application.java:151)
+	at org.eclipse.fx.ui.workbench.fx.E4Application.jfxStart(E4Application.java:169)
+	at org.eclipse.fx.ui.workbench.fx.DefaultJFXApp.start(DefaultJFXApp.java:57)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$55/1754479962.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$51/783400696.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$53/808939248.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$52/1197686960.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/160780769.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.<init>(PartRenderingEngine.java:119)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.eclipse.e4.core.internal.di.ConstructorRequestor.execute(ConstructorRequestor.java:41)
+	... 28 more
+!SESSION 2014-11-17 12:58:23.102 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-11-17 12:58:23.103
+!MESSAGE Unable to create class 'dummy.parts.MediaPart' from bundle '2'
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: MediaException: UNKNOWN : com.sun.media.jfxmedia.MediaException: Could not create player! : com.sun.media.jfxmedia.MediaException: Could not create player!
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.fx.ui.workbench.renderers.base.BasePartRenderer.doProcessContent(BasePartRenderer.java:205)
+	at org.eclipse.fx.ui.workbench.renderers.base.BasePartRenderer.doProcessContent(BasePartRenderer.java:1)
+	at org.eclipse.fx.ui.workbench.renderers.base.BaseRenderer.processContent(BaseRenderer.java:647)
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.createGui(PartRenderingEngine.java:191)
+	at org.eclipse.fx.ui.workbench.fx.PartRenderingEngine.createGui(PartRenderingEngine.java:288)
+	at org.eclipse.fx.ui.workbench.renderers.base.BaseRenderer.engineCreateWidget(BaseRenderer.java:567)
+	at org.eclipse.fx.ui.workbench.renderers.base.BaseStackRenderer$7.call(BaseStackRenderer.java:305)
+	at org.eclipse.fx.ui.workbench.renderers.base.BaseStackRenderer$7.call(BaseStackRenderer.java:1)
+	at org.eclipse.fx.ui.workbench.renderers.fx.DefStackRenderer$StackItemImpl.handleSelection(DefStackRenderer.java:397)
+	at org.eclipse.fx.ui.workbench.renderers.fx.DefStackRenderer$StackWidgetImpl$4.changed(DefStackRenderer.java:212)
+	at org.eclipse.fx.ui.workbench.renderers.fx.DefStackRenderer$StackWidgetImpl$4.changed(DefStackRenderer.java:1)
+	at com.sun.javafx.binding.ExpressionHelper$Generic.fireValueChangedEvent(ExpressionHelper.java:361)
+	at com.sun.javafx.binding.ExpressionHelper.fireValueChangedEvent(ExpressionHelper.java:81)
+	at javafx.beans.property.ReadOnlyObjectWrapper$ReadOnlyPropertyImpl.fireValueChangedEvent(ReadOnlyObjectWrapper.java:176)
+	at javafx.beans.property.ReadOnlyObjectWrapper.fireValueChangedEvent(ReadOnlyObjectWrapper.java:142)
+	at javafx.beans.property.ObjectPropertyBase.markInvalid(ObjectPropertyBase.java:112)
+	at javafx.beans.property.ObjectPropertyBase.set(ObjectPropertyBase.java:145)
+	at javafx.scene.control.SelectionModel.setSelectedItem(SelectionModel.java:102)
+	at javafx.scene.control.TabPane$TabPaneSelectionModel.select(TabPane.java:691)
+	at org.eclipse.fx.ui.workbench.renderers.fx.DefStackRenderer$StackWidgetImpl.selectItem(DefStackRenderer.java:306)
+	at org.eclipse.fx.ui.workbench.renderers.base.BaseStackRenderer.handleSelectedElement(BaseStackRenderer.java:428)
+	at org.eclipse.fx.ui.workbench.renderers.base.BaseStackRenderer$2.handleEvent(BaseStackRenderer.java:109)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.fx.ui.workbench.fx.internal.UISynchronizeImpl.syncExec(UISynchronizeImpl.java:73)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:488)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:454)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:694)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:674)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:615)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:603)
+	at dummy.parts.MediaListPart.handleOpen(MediaListPart.java:102)
+	at dummy.parts.MediaListPart$2.handle(MediaListPart.java:83)
+	at dummy.parts.MediaListPart$2.handle(MediaListPart.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3437)
+	at javafx.scene.Scene$ClickGenerator.access$7900(Scene.java:3365)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3733)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3452)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1728)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2461)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:348)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:382)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:553)
+	at com.sun.glass.ui.View.notifyMouse(View.java:925)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$45(GtkApplication.java:126)
+	at com.sun.glass.ui.gtk.GtkApplication$$Lambda$43/1152051526.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: MediaException: UNKNOWN : com.sun.media.jfxmedia.MediaException: Could not create player! : com.sun.media.jfxmedia.MediaException: Could not create player!
+	at javafx.scene.media.MediaException.exceptionToMediaException(MediaException.java:146)
+	at javafx.scene.media.MediaPlayer.init(MediaPlayer.java:511)
+	at javafx.scene.media.MediaPlayer.<init>(MediaPlayer.java:414)
+	at dummy.parts.MediaPart.initMovie(MediaPart.java:125)
+	at dummy.parts.MediaPart.init(MediaPart.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 91 more
+Caused by: com.sun.media.jfxmedia.MediaException: Could not create player!
+	at com.sun.media.jfxmediaimpl.NativeMediaManager.getPlayer(NativeMediaManager.java:222)
+	at com.sun.media.jfxmedia.MediaManager.getPlayer(MediaManager.java:104)
+	at javafx.scene.media.MediaPlayer.init(MediaPlayer.java:467)
+	... 99 more
