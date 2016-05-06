@@ -1,19 +1,22 @@
 # bnd plugin setup
 ###################
-bnd-release	=	https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBuild/artifact/dist/bundles
--pluginpath:\
-        ${build}/cache/biz.aQute.repository.jar;url=${bnd-release}/biz.aQute.repository/biz.aQute.repository-latest.jar
+#bnd-release	=	https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBuild/artifact/dist/bundles
+#-pluginpath:\
+#        ${build}/cache/biz.aQute.repository.jar;url=${bnd-release}/biz.aQute.repository/biz.aQute.repository-latest.jar
 
 # repositories
 ###############
 # no idea what the wrapper does, but added it anyways ...
--plugin.wrapper: aQute.bnd.deployer.repository.wrapper.Plugin; \
-            location            =	"${build}/cache/wrapper"; \
-            reindex				=	true, \
+#-plugin.wrapper: aQute.bnd.deployer.repository.wrapper.Plugin; \
+#            location            =	"${build}/cache/wrapper"; \
+#            reindex				=	true, \
 
 # our efxclipse runtime repo
--plugin.efxrepo: aQute.bnd.deployer.repository.FixedIndexedRepo; name=e(fx)clipse runtime; \
-					locations=http://download.eclipse.org/efxclipse/runtime-nightly/site/repository.xml
+#-plugin.efxrepoNightly: aQute.bnd.deployer.repository.FixedIndexedRepo; name=e(fx)clipse runtime nightly; \
+#					locations=http://download.eclipse.org/efxclipse/runtime-nightly/site/repository.xml.gz
+
+-plugin.efxrepo230: aQute.bnd.deployer.repository.FixedIndexedRepo; name=e(fx)clipse runtime 2.3.0; \
+					locations=http://download.eclipse.org/efxclipse/runtime-released/2.3.0/site/repository.xml.gz
 
 # need bundlehub because our org.eclipse.osgi bundle does not resolve anything
 -plugin.bundlehub: aQute.bnd.deployer.repository.FixedIndexedRepo; name=Bndtools Hub; locations=https://raw.githubusercontent.com/bndtools/bundle-hub/master/index.xml.gz
@@ -25,6 +28,7 @@ javac.target: 					1.8
 -runpath.efx org.eclipse.fx.osgi 
 
 -runsystempackages.efx: \
+	javax.annotation, \
     javax.crypto,\
     javax.crypto.interfaces,\
     javax.crypto.spec,\
@@ -44,7 +48,41 @@ javac.target: 					1.8
     javax.security.auth.spi,\
     javax.security.auth.x500,\
     javax.security.cert,\
-    javax.security.sasl
+    javax.security.sasl,\
+    javafx.animation,\
+	javafx.application,\
+	javafx.beans,\
+	javafx.beans.binding,\
+	javafx.beans.property,\
+	javafx.beans.property.adapter,\
+	javafx.beans.value,\
+	javafx.collections,\
+	javafx.collections.transformation,\
+	javafx.concurrent,\
+	javafx.css,\
+	javafx.embed.swing,\
+	javafx.event,\
+	javafx.fxml,\
+	javafx.geometry,\
+	javafx.print,\
+	javafx.scene,\
+	javafx.scene.canvas,\
+	javafx.scene.chart,\
+	javafx.scene.control,\
+	javafx.scene.control.cell,\
+	javafx.scene.effect,\
+	javafx.scene.image,\
+	javafx.scene.input,\
+	javafx.scene.layout,\
+	javafx.scene.media,\
+	javafx.scene.paint,\
+	javafx.scene.shape,\
+	javafx.scene.text,\
+	javafx.scene.transform,\
+	javafx.scene.web,\
+	javafx.stage,\
+	javafx.util,\
+	javafx.util.converter
     
 -runsystemcapabilities: ${native_capability} 
 -runtrace: true 
@@ -62,8 +100,8 @@ javac.target: 					1.8
 	org.eclipse.e4.ui.model.workbench,\
 	org.eclipse.e4.ui.services,\
 	org.eclipse.e4.ui.workbench,\
-	javax.inject;version=1.0,\
-	javax.annotation;version=1.2
+	org.eclipse.e4.core.di.annotations,\
+	javax.inject;version=1.0
 
 -buildpath:
 
@@ -75,64 +113,63 @@ javac.target: 					1.8
 # some macros for the bndrun files
 ###################################
 
-efxclipse.version: @1.2.0
+efxclipse.version: @2.3.0
 
 bundles.equinox: \
-	org.eclipse.equinox.app;version=@1.3.200,\
-	org.eclipse.equinox.common;version=@3.6.200,\
-	org.eclipse.equinox.console;version=@1.1.0,\
-	org.eclipse.equinox.ds;version=@1.4.200,\
+	org.eclipse.equinox.app;version=@1.3.300,\
+	org.eclipse.equinox.common;version=@3.7.0,\
+	org.eclipse.equinox.ds;version=@1.4.300,\
 	org.eclipse.equinox.event;version=@1.3.100,\
-	org.eclipse.equinox.preferences;version=@3.5.200,\
-	org.eclipse.equinox.registry;version=@3.5.400,\
+	org.eclipse.equinox.preferences;version=@3.5.300,\
+	org.eclipse.equinox.registry;version=@3.6.0,\
 	org.eclipse.equinox.util;version=@1.0.500
 
 bundles.equinox.console: \
-	org.eclipse.equinox.console;version=@1.1.0,\
-	org.apache.felix.gogo.runtime;version=@0.10.0,\
+	org.eclipse.equinox.console;version=@1.1.100,\
+	org.apache.felix.gogo.runtime;version=@0.16.2,\
 	org.apache.felix.gogo.shell;version=@0.10.0,\
-	org.apache.felix.gogo.command;version=@0.10.0
+	org.apache.felix.gogo.command;version=@0.14.0
 
 bundles.deps:\
-	com.ibm.icu;version='[52.1.0,52.1.1)',\
-	javax.annotation;version='[1.2.0,1.2.1)',\
-	javax.inject;version='[1.0.0,1.0.1)',\
-	javax.xml;version='[1.3.4,1.3.5)',\
-	org.apache.commons.lang;version='[2.6.0,2.6.1)',\
-	org.eclipse.osgi.services;version='[3.4.0,3.4.1)'
+	com.ibm.icu.base;version='[52.1.0,53)',\
+	javax.annotation.jre;version='[1.2.0,2)',\
+	javax.inject;version='[1.0.0,2)',\
+	javax.xml;version='[1.3.4,2)',\
+	org.apache.commons.lang;version='[2.6.0,3)',\
+	org.eclipse.osgi.services;version='[3.5.0,4)',\
+	org.apache.commons.jxpath;version='[1.2.0,2)',\
+	com.google.guava;version='[18.0.0,19)',\
+	org.eclipse.jdt.annotation;version=2.0.100
 
 bundles.eclipse.emf: \
-	org.eclipse.emf.common;version='[2.10.1,2.10.2)',\
-	org.eclipse.emf.ecore;version='[2.10.1,2.10.2)',\
-	org.eclipse.emf.ecore.change;version='[2.10.0,2.10.1)',\
-	org.eclipse.emf.ecore.xmi;version='[2.10.1,2.10.2)'
+	org.eclipse.emf.common;version='[2.11.0,3)',\
+	org.eclipse.emf.ecore;version='[2.11.1,3)',\
+	org.eclipse.emf.ecore.change;version='[2.11.0,3)',\
+	org.eclipse.emf.ecore.xmi;version='[2.11.1,3)'
 
 bundles.eclipse.core:\
-	org.eclipse.core.commands;version='[3.6.100,3.6.101)',\
-	org.eclipse.core.contenttype;version='[3.4.200,3.4.201)',\
-	org.eclipse.core.databinding.observable;version='[1.4.1,1.4.2)',\
-	org.eclipse.core.databinding.property;version='[1.4.200,1.4.201)',\
-	org.eclipse.core.expressions;version='[3.4.600,3.4.601)',\
-	org.eclipse.core.jobs;version='[3.6.0,3.6.1)',\
-	org.eclipse.core.runtime;version='[3.10.0,3.10.1)'
+	org.eclipse.core.commands;version='[3.7.0,4)',\
+	org.eclipse.core.contenttype;version='[3.5.0,4)',\
+	org.eclipse.core.databinding.observable;version='[1.5.0, 2)',\
+	org.eclipse.core.databinding.property;version='[1.5.0,2)',\
+	org.eclipse.core.expressions;version='[3.5.0,4)',\
+	org.eclipse.core.jobs;version='[3.7.0,4)',\
+	org.eclipse.core.runtime;version='[3.11.1,4)'
 
 bundles.e4.core:\
-	org.eclipse.e4.core.commands;version=@0.10.2,\
-	org.eclipse.e4.core.contexts;version=@1.3.100,\
-	org.eclipse.e4.core.di;version=@1.4.0,\
-	org.eclipse.e4.core.di.extensions;version=@0.12.0,\
-	org.eclipse.e4.core.services;version=@1.2.1,\
-	org.eclipse.e4.ui.di;version=@1.0.0,\
-	org.eclipse.e4.ui.model.workbench;version=@1.1.0,\
-	org.eclipse.e4.ui.services;version=@1.1.0,\
-	org.eclipse.e4.ui.workbench;version=@1.2.1,\
-	org.eclipse.core.commands;version=@3.6.0,\
-	org.eclipse.core.contenttype;version=@3.4.0,\
-	org.eclipse.core.databinding.observable;version=@1.4.1,\
-	org.eclipse.core.databinding.property;version=@1.4.200,\
+	org.eclipse.e4.core.commands;version='[0.11.0,1)',\
+	org.eclipse.e4.core.contexts;version='[1.4.0,2)',\
+	org.eclipse.e4.core.di;version='[1.5.0,2)',\
+	org.eclipse.e4.core.di.annotations;version='[1.4.0,2)',\
+	org.eclipse.e4.core.di.extensions;version='[0.13.0,1)',\
+	org.eclipse.e4.core.services;version='[2.0.0,3)',\
+	org.eclipse.e4.ui.di;version='[1.1.0,2)',\
+	org.eclipse.e4.ui.model.workbench;version='[1.1.100,2)',\
+	org.eclipse.e4.emf.xpath;version='[0.1.100,2)',\
+	org.eclipse.e4.ui.services;version='[1.2.0,2)',\
+	org.eclipse.e4.ui.workbench;version='[1.3.0,2)'
 
 bundles.e4.efxclipse: \
-	org.eclipse.fx.javafx;version=@2.2.0,\
 	org.eclipse.fx.bndlauchner;version=latest,\
 	org.eclipse.fx.core;version=${efxclipse.version},\
 	org.eclipse.fx.core.databinding;version=${efxclipse.version},\

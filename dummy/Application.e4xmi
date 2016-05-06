@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_Z90doGiuEeS7oKrqNQ5O3Q" elementId="org.efxclipse.e4.application" bindingContexts="_Z9z2kGiuEeS7oKrqNQ5O3Q">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_Z90doWiuEeS7oKrqNQ5O3Q" elementId="org.efxclipse.e4.mainWindow" label="Media Application" x="30" y="30" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_Z90doWiuEeS7oKrqNQ5O3Q" elementId="org.efxclipse.e4.mainWindow" label="Media Application" x="0" y="0" width="800" height="480">
     <persistedState key="fx.stage.decoration" value="platform:/plugin/dummy/dummy/decoration/TopArea.fxml"/>
     <children xsi:type="basic:PartSashContainer" xmi:id="_Z90domiuEeS7oKrqNQ5O3Q" horizontal="true">
       <children xsi:type="basic:Part" xmi:id="_Z90do2iuEeS7oKrqNQ5O3Q" containerData="0.3" contributionURI="bundleclass://dummy/dummy.parts.MediaListPart"/>

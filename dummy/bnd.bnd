@@ -1,13 +1,20 @@
 Bundle-SymbolicName: dummy; singleton:=true
 
-Private-Package:  \
+Private-Package: \
 	dummy.decoration,\
 	dummy.handlers,\
 	dummy.model,\
-	dummy.parts
+	dummy.parts,\
+	dummy.themes
 	
 Include-Resource: \
 	plugin.xml = _plugin.xml,\
 	Application.e4xmi = Application.e4xmi,\
 	css = css,\
 	icons = icons 
+	
+-buildpath: \
+	${bundles.e4.efxclipse},\
+	osgi.core;version=5.0,\
+	osgi.cmpn;version=5.0
+-dsannotations: *

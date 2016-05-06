@@ -30,10 +30,12 @@ runproperties.application:\
 -runproperties: \
 	${runproperties.*}
 
--runrequires:  \
-	osgi.identity;filter:='(osgi.identity=dummy)'
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=dummy)',\
+	osgi.identity;filter:='(osgi.identity=app)'
 
 
 
 -runbundles:  \
-	dummy;version=latest
+	dummy;version=latest,\
+	app;version=latest
